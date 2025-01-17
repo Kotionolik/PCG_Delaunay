@@ -1,12 +1,4 @@
-﻿///////////////////////////////////////////////////////////////////////////////
-//
-//  Form1.cs
-//
-//  By Philip R. Braica (HoshiKata@aol.com, VeryMadSci@gmail.com)
-//
-//  Distributed under the The Code Project Open License (CPOL)
-//  http://www.codeproject.com/info/cpol10.aspx
-///////////////////////////////////////////////////////////////////////////////
+
 
 using System;
 using System.Collections.Generic;
@@ -26,16 +18,9 @@ namespace gg.Mesh
             InitializeComponent();
         }
 
-        /// <summary>
-        /// The set.
-        /// </summary>
+        
         List<Vertex> Set = new List<Vertex>();
 
-        /// <summary>
-        /// Create set.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Set = MakeTestSet(640, 480, (int)numericUpDown2.Value, (int)numericUpDown1.Value);
@@ -45,10 +30,6 @@ namespace gg.Mesh
             pictureBox1.Image = b;
         }
 
-        /// <summary>
-        /// Draw the set.
-        /// </summary>
-        /// <param name="b"></param>
         protected void drawSet(Bitmap b)
         {
             using (Graphics g = Graphics.FromImage(b))
@@ -62,11 +43,6 @@ namespace gg.Mesh
             }
         }
 
-        /// <summary>
-        /// Run.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             Bitmap b = pictureBox1.Image != null ? (Bitmap)pictureBox1.Image : new Bitmap(640, 480, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
@@ -85,31 +61,14 @@ namespace gg.Mesh
             pictureBox1.Image = b;
         }
 
-        /// <summary>
-        /// Test.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             runCount = 0;
             timer1.Enabled = true;
         }
 
-        /// <summary>
-        /// For the timer iteration test.
-        /// </summary>
         int runCount = 0;
 
-
-        /// <summary>
-        /// Make a test set of vertexes.
-        /// </summary>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
-        /// <param name="seed"></param>
-        /// <param name="count"></param>
-        /// <returns></returns>
         public List<Vertex> MakeTestSet(int width, int height, int seed, int count)
         {
             List<Vertex> set = new List<Vertex>();
@@ -121,11 +80,6 @@ namespace gg.Mesh
             return set;
         }
 
-        /// <summary>
-        /// Testing, run the pattern once per second.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (runCount > 10)
@@ -150,41 +104,21 @@ namespace gg.Mesh
             pictureBox1.Image = b;
         }
 
-        /// <summary>
-        /// Parameter changed, fire timer to event coalese.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
             timer2.Enabled = true;
         }
 
-        /// <summary>
-        /// Parameter changed, fire timer to event coalese.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
             timer2.Enabled = true;
         }
 
-        /// <summary>
-        /// Parameter changed, fire timer to event coalese.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             timer2.Enabled = true;
         }
 
-        /// <summary>
-        /// Timer 2 went off, do an update.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void timer2_Tick(object sender, EventArgs e)
         {
             timer2.Enabled = false;
