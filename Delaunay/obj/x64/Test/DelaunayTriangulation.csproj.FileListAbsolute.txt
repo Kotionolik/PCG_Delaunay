@@ -1,0 +1,8 @@
+D:\1\PKG_Project_Delaunay\Delaunay\bin\x64\Test\Delaunay.exe.config
+D:\1\PKG_Project_Delaunay\Delaunay\bin\x64\Test\Delaunay.exe
+D:\1\PKG_Project_Delaunay\Delaunay\obj\x64\Test\DelaunayTriangulation.csproj.AssemblyReference.cache
+D:\1\PKG_Project_Delaunay\Delaunay\obj\x64\Test\gg.Mesh.Form1.resources
+D:\1\PKG_Project_Delaunay\Delaunay\obj\x64\Test\Delaunay.Properties.Resources.resources
+D:\1\PKG_Project_Delaunay\Delaunay\obj\x64\Test\DelaunayTriangulation.csproj.GenerateResource.cache
+D:\1\PKG_Project_Delaunay\Delaunay\obj\x64\Test\DelaunayTriangulation.csproj.CoreCompileInputs.cache
+D:\1\PKG_Project_Delaunay\Delaunay\obj\x64\Test\Delaunay.exe
